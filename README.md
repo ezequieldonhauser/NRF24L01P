@@ -1,6 +1,6 @@
 # NRF24L01P
 
-this project implements: 
+this project implements:
 2 connections p2p with NORDIC NRF24L01+ module 2.4Ghz
 this connections sends and receive 10BYTE
 
