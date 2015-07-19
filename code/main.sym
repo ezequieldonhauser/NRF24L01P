@@ -1,0 +1,126 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+00B     INTCON
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     @SCRATCH
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @INTERRUPT_AREA
+02D     @INTERRUPT_AREA
+02E-02F espera_ack
+030.0   ACK
+031-03A RECEBE
+03B-044 ENVIA
+045     @TRIS_C
+046     a
+047     b
+048     c
+049     d
+04A-053 teste
+054     envia_dados.i
+054     @PRINTF_X_95.P1
+054     @PRINTF_U_95.P2
+054     lcd_init.i
+054     MAIN.@SCRATCH1
+055     @PRINTF_U_95.P1
+055     @PRINTF_X_95.P2
+055     envia_dados.status
+055     lcd_init.@SCRATCH1
+056     @DIV88.P1
+056     lcd_putc.c
+056     envia_dados.@SCRATCH1
+057     @delay_ms1.P1
+057     @DIV88.P2
+057     lcd_gotoxy.x
+058     lcd_gotoxy.y
+058     @DIV88.@SCRATCH1
+059     lcd_gotoxy.address
+05A     lcd_gotoxy.@SCRATCH1
+05B     lcd_send_byte.address
+05C     lcd_send_byte.n
+05D     lcd_read_byte.low
+05D     lcd_send_byte.@SCRATCH1
+05E     lcd_read_byte.high
+05E     lcd_send_nibble.nibble
+05F.0   lcd_read_nibble.retval_0
+05F     lcd_read_nibble.retval
+05F.1   lcd_read_nibble.retval_1
+05F.2   lcd_read_nibble.retval_2
+05F.3   lcd_read_nibble.retval_3
+05F     lcd_read_byte.@SCRATCH1
+060     recebe_dados.i
+061     recebe_dados.status
+062     recebe_dados.@SCRATCH1
+085     TRISA
+086     TRISB
+087     TRISC
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+00B1  @delay_ms1
+017F  config_nrf24
+03CE  envia_dados
+003D  recebe_dados
+003D  interrupcao
+0035  LCD_INIT_STRING
+00C5  lcd_send_nibble
+00EE  lcd_read_nibble
+0117  lcd_read_byte
+0113  lcd_send_byte
+0150  lcd_init
+0345  lcd_gotoxy
+032E  lcd_putc
+04DF  MAIN
+0363  @DIV88
+0378  @PRINTF_U_95
+03AD  @PRINTF_X_95
+04DF  @cinit
+
+Project Directory:
+    C:\Users\User\Desktop\Nova pasta\
+
+Project Files:
+    main.c
+    ..\..\..\..\Program Files (x86)\PICC\devices\16F873A.h
+    NRF24L01P.c
+    flex_lcd.c
+
+Units:
+    C:\Users\User\Desktop\Nova pasta\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta
