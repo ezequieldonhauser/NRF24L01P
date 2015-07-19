@@ -7,5 +7,5 @@ this connections sends and receive 10BYTE
 compiler and IDE:
 CCS C COMPILER
 
-how to use this here:
+how to use this, here:
 https://www.youtube.com/watch?v=Pj-enHa2wvU
